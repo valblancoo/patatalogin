@@ -1,0 +1,258 @@
+:root{
+    --mainSerif:scotch-display, sans-serif;
+    --mainSansSerif: canada-type-gibson, sans-serif;;
+    --mainRed: rgb(219, 5, 5);
+    --mainOrange: #FF8C00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: var(--mainSansSerif);  
+}
+
+h2 { 
+    font-family: var(--mainSerif);
+    font-weight: 900;
+    font-size: 7em; 
+    padding: 0.5em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+h3 { 
+    font-family: var(--mainSerif);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 6em; 
+    padding: 0.5em;
+}
+
+h4 {
+    font-family: var(--mainSansSerif);
+    text-align: center;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+p {
+    font-family: var(--mainSansSerif);
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/*BACK BUTTOM*/
+
+#back > a > i {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1.6em;
+    z-index: 1;
+    
+    text-align: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.25s;
+    position: fixed;
+    background-color: darkorange;
+    border-radius: 100px;
+    color: white;
+}
+
+#back > a > i:hover{
+    background-color: rgb(219, 5, 5);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: calc(70vh - 0em);    
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../img/subscribe.png);
+    background-repeat: no-repeat;
+}
+
+.marquee {
+    width: 100%;
+    padding: 0.6em 0;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    background-color: var(--mainOrange);
+    font-family: var(--mainSansSerif);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.marquee > span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee > span:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+#intro {
+    width: 70%;
+}
+
+#intro > h1 {
+    font-family: var(--mainSansSerif);
+    font-size: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro > h2 {
+    font-family: var(--mainSansSerif);
+    font-size: 2em;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-family: var(--mainSansSerif);
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+input {
+    padding: 1em;
+    margin: 0.5em;;
+    border-radius: 100px;
+    width: 400px;
+    font-size: 1.1em;
+    font-family: var(--mainSansSerif);
+    background-color: navajowhite;    
+    border-style: none;
+}
+
+form > a > p {
+    padding: 1em;
+    background-color: darkorange;
+    border-radius: 100px;
+    width: 400px;
+    text-align: center;
+    color: white;
+    margin: 1em;
+}
+
+form > a {
+    text-decoration: none;
+}
+
+#footer {
+    padding: 2em;
+    margin-bottom: 2em;
+    font-size: 1em;
+    font-family: var(--mainSansSerif);
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer > div > h4 {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.logo > figure > img {
+    height: 14em;
+    width: auto;
+    margin-bottom: 1em;
+}
+
+#social {
+    background-color: darkorange;
+    display: flex;
+    justify-content: space-around;
+}
+
+#social > a > i {
+    color: white;
+    font-size: 2em;
+    padding: 1em;
+}
+
+#social > a > i:hover{
+    color: var(--mainRed);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 500px) {
+    #formualrio > h2 {
+        font-size: 1em;
+    }
+    
+    .logo > figure > img {
+        font-size: 0.6em;
+    }
+    
+    #foot {
+        padding: 1em;
+    }
+    #foot > .contact > h4,
+    #foot > .legal > h4{
+        font-size: 1.3em;
+    }
+    
+    #foot > .contact > p,
+    #foot > .legal > p{
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #principal {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #principal > figure > img {
+        width: 100vw;
+    }
+    
+    .marshall {
+        width: 100%;
+    }
+}
+
+
